@@ -12,7 +12,8 @@ import System.GUI
 
 # Load Ring Libraries
     Load "lightguilib.ring"
-    Load "stdlib.ring"
+    Load "sqlitelib.ring"
+    Load "stdlibcore.ring"
 
 UserIcons = CurrentDir() +"/"
 
@@ -36,7 +37,7 @@ MyApp = New qApp
         Xspace  = 55 ; YSpace  = 55
         Xpos    = 10 ; Ypos    = 10
          
-        setwinicon(self,"images/calc.png")
+        setwinicon(self,"calc.png")
         setwindowtitle("Ring Calculator")
         setwindowmodality(false)
         setFixedSize(290,355 )
@@ -689,7 +690,7 @@ Func Memo()
         setwindowtitle("History Of Ring Calculator")
         setwindowmodality(false)
         setparent(win1)
-        setwinicon(self,"images/calc.png")
+        setwinicon(self,"calc.png")
         setFixedSize(550,500)
         setwindowflags( qt_dialog & ~ qt_WindowMaximizeButtonHint)
 
